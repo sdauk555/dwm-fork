@@ -81,8 +81,8 @@ static const char *voldowncmd[] = { "pactl", "set-sink-volume", "1", "-5%", NULL
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ SUPER,                        XK_space,  spawn,          {.v = dmenucmd } },
+	{ MODKEY|ControlMask,           XK_t, 	   spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -125,9 +125,9 @@ static Key keys[] = {
 	{ SUPER,			XK_w,	   spawn,	   {.v = firefoxcmd } },
 	{ SUPER,			XK_f,	   spawn,	   {.v = pcmanfmcmd } },
 	{ SUPER,			XK_l,	   spawn,	   {.v = lockscreencmd } },
-	/*{ 0, 				XF86XK_AudioMute, spawn, {.v = mutecmd } },
+	{ 0, 				XF86XK_AudioMute, spawn, {.v = mutecmd } },
 	{ 0, 				XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
-	{ 0, 				XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },*/
+	{ 0, 				XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
