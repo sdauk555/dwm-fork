@@ -66,6 +66,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
+static const char *pcmanfmcmd[] = { "pcmanfm", NULL };
+static const char *lockscreencmd[] = { "betterlockscreen", "-l", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
@@ -112,6 +114,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ SUPER,			XK_w,	   spawn,	   {.v = firefoxcmd } },
+	{ SUPER,			XK_f,	   spawn,	   {.v = pcmanfmcmd } },
+	{ SUPER,			XK_l,	   spawn,	   {.v = lockscreencmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
