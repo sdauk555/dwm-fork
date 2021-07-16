@@ -4,7 +4,7 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
@@ -15,15 +15,15 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#141414";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#262938";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_blue[]        = "#0a2a8a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray4, col_gray3, col_gray3 },
-	[SchemeSel]  = { col_gray4, col_gray3,  col_blue  },
+	[SchemeNorm] = { col_gray4, col_gray3, col_blue },
+	[SchemeSel]  = { col_gray4, col_gray1,  col_blue  },
 };
 
 /* tagging */
@@ -81,6 +81,7 @@ static const char *lockscreencmd[] = { "betterlockscreen", "-l", NULL };
 static const char *mutecmd[] = { "pactl", "set-sink-mute", "1", "toggle", NULL };
 static const char *volupcmd[] = { "pactl", "set-sink-volume", "1", "+5%", NULL };
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "1", "-5%", NULL };
+static const char *setdualscreencmd[] = { "/home/sam/.screenlayout/DualMonitor.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -131,6 +132,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_m,	   spawn,	   {.v = thunderbirdcmd } },
 	{ MODKEY|ControlMask,		XK_s,	   spawn,	   {.v = spotifycmd } },
 	{ MODKEY|ControlMask,		XK_d,	   spawn,	   {.v = discordcmd } },
+	{ SUPER|ShiftMask,		XK_d,	   spawn,	   {.v = setdualscreencmd } },
 	{ 0, 				XF86XK_AudioMute, spawn, {.v = mutecmd } },
 	{ 0, 				XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
 	{ 0, 				XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
