@@ -72,6 +72,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *pcmanfmcmd[] = { "pcmanfm", NULL };
+static const char *thunderbirdcmd[] = { "thunderbird", NULL };
+static const char *spotifycmd[] = { "spotify", NULL };
+static const char *discordcmd[] = { "discord", NULL };
 
 /* custom system control cmds */
 static const char *lockscreencmd[] = { "betterlockscreen", "-l", NULL };
@@ -125,6 +128,9 @@ static Key keys[] = {
 	{ SUPER,			XK_w,	   spawn,	   {.v = firefoxcmd } },
 	{ SUPER,			XK_f,	   spawn,	   {.v = pcmanfmcmd } },
 	{ SUPER,			XK_l,	   spawn,	   {.v = lockscreencmd } },
+	{ MODKEY|ControlMask,		XK_m,	   spawn,	   {.v = thunderbirdcmd } },
+	{ MODKEY|ControlMask,		XK_s,	   spawn,	   {.v = spotifycmd } },
+	{ MODKEY|ControlMask,		XK_d,	   spawn,	   {.v = discordcmd } },
 	{ 0, 				XF86XK_AudioMute, spawn, {.v = mutecmd } },
 	{ 0, 				XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
 	{ 0, 				XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
