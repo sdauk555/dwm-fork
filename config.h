@@ -73,7 +73,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *pcmanfmcmd[] = { "pcmanfm", NULL };
 static const char *thunderbirdcmd[] = { "thunderbird", NULL };
-static const char *spotfiycmd[] = { "spotify", NULL };
+static const char *spotifycmd[] = { "spotify", NULL };
 static const char *discordcmd[] = { "discord", NULL };
 
 /* custom system control cmds */
