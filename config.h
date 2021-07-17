@@ -81,7 +81,9 @@ static const char *lockscreencmd[] = { "betterlockscreen", "-l", NULL };
 static const char *mutecmd[] = { "pactl", "set-sink-mute", "1", "toggle", NULL };
 static const char *volupcmd[] = { "pactl", "set-sink-volume", "1", "+5%", NULL };
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "1", "-5%", NULL };
-static const char *setdualscreencmd[] = { "/home/sam/.screenlayout/DualMonitor.sh", NULL };
+static const char *setdualscreen1cmd[] = { "/home/sam/.screenlayout/DualMonitor1.sh", NULL };
+static const char *setdualscreen2cmd[] = { "/home/sam/.screenlayout/DualMonitor2.sh", NULL };
+static const char *setsinglescreencmd[] = { "/home/sam/.screenlayout/SingleMonitor.sh", NULL }; 
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -132,7 +134,9 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_m,	   spawn,	   {.v = thunderbirdcmd } },
 	{ MODKEY|ControlMask,		XK_s,	   spawn,	   {.v = spotifycmd } },
 	{ MODKEY|ControlMask,		XK_d,	   spawn,	   {.v = discordcmd } },
-	{ SUPER|ShiftMask,		XK_d,	   spawn,	   {.v = setdualscreencmd } },
+	{ SUPER|ShiftMask|ControlMask,	XK_1,	   spawn,	   {.v = setdualscreen1cmd } },
+	{ SUPER|ShiftMask|ControlMask,	XK_2,	   spawn,	   {.v = setdualscreen2cmd } },
+	{ SUPER|ShiftMask|ControlMask,	XK_3,	   spawn,	   {.v = setsinglescreencmd } },
 	{ 0, 				XF86XK_AudioMute, spawn, {.v = mutecmd } },
 	{ 0, 				XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
 	{ 0, 				XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
