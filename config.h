@@ -76,10 +76,10 @@ static const char *spotifycmd[] = { "spotify", NULL };
 static const char *discordcmd[] = { "discord", NULL };
 
 /* custom system control cmds */
-static const char *lockscreencmd[] = { "betterlockscreen", "-l", NULL };
-static const char *mutecmd[] = { "pactl", "set-sink-mute", "1", "toggle", NULL };
-static const char *volupcmd[] = { "pactl", "set-sink-volume", "1", "+5%", NULL };
-static const char *voldowncmd[] = { "pactl", "set-sink-volume", "1", "-5%", NULL };
+static const char *lockscreencmd[] = { "betterlockscreen", "-l", "-tf", "%l:%M %_p", NULL };
+static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *volupcmd[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
+static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char *setdualscreen1cmd[] = { "/home/sam/.screenlayout/DualMonitor1.sh", NULL };
 static const char *setdualscreen2cmd[] = { "/home/sam/.screenlayout/DualMonitor2.sh", NULL };
 static const char *setsinglescreencmd[] = { "/home/sam/.screenlayout/SingleMonitor.sh", NULL }; 
