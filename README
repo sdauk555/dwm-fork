@@ -53,5 +53,5 @@ Super+alt+0 = toggle gaps
 Super+shift+alt+0 = reset gap size to default 
   
 # Floating mode  
-alt+mouse1 = drag window  
-alt+mouse2 = resize window   
+Alt+mouse1 = drag window  
+Alt+mouse2 = resize window   
