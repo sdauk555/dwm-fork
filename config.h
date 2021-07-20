@@ -69,7 +69,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 
 /* custom program cmds */
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *firefoxcmd[] = { "firefox", NULL };
+static const char *bravecmd[] = { "brave", NULL };
 static const char *pcmanfmcmd[] = { "pcmanfm", NULL };
 static const char *thunderbirdcmd[] = { "thunderbird", NULL };
 static const char *spotifycmd[] = { "spotify", NULL };
@@ -129,7 +129,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ SUPER,			XK_w,	   spawn,	   {.v = firefoxcmd } },
+	{ SUPER,			XK_w,	   spawn,	   {.v = bravecmd } },
 	{ SUPER,			XK_f,	   spawn,	   {.v = pcmanfmcmd } },
 	{ SUPER,			XK_l,	   spawn,	   {.v = lockscreencmd } },
 	{ MODKEY|ControlMask,		XK_m,	   spawn,	   {.v = thunderbirdcmd } },
