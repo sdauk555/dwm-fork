@@ -3,17 +3,25 @@ Keybinds Guide:
 # Launchers  
 Ctrl+alt+t = terminal  
 Super+space = dmenu  
-Super+w = firefox  
+Super+w = brave  
 Super+f = pcmanfm  
 Ctrl+alt+m = thunderbird  
 Ctrl+alt+s = spotify  
 Ctrl+alt+d = discord  
+Ctrl+alt+v = vmware  
+Ctrl+alt+l = libreoffice  
+Ctrl+alt+b = blueman manager  
+Ctrl+alt+p = pavucontrol  
   
 # System  
 Super+l = lock screen  
 Super+ctrl+shift+1 = screen layout option 1  
 Super+ctrl+shift+2 = screen layout option 2  
-Super+ctrl+shfit+3 = screen layout option 3  
+Super+ctrl+shift+3 = screen layout option 3  
+Ctrl+alt+shift+1 = audio source 0  
+Ctrl+alt+shift+2 = audio source 1  
+Ctrl+alt+shift+3 = audio source 2  
+Ctrl+alt+shift+4 = audio source 3  
 Ctrl+alt+del = logout  
   
 # Navigation  
