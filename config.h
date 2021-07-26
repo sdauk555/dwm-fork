@@ -77,7 +77,6 @@ static const char *vmplayercmd[] = { "vmplayer", NULL };
 static const char *libreofficecmd[] = { "libreoffice", NULL };
 static const char *bluemancmd[] = { "blueman-manager", NULL };
 static const char *pavucontrolcmd[] = { "pavucontrol", NULL };
-static const char *newsflashcmd[] = { "com.gitlab.newsflash", NULL };
 
 /* custom system control cmds */
 static const char *lockscreencmd[] = { "betterlockscreen", "-l", "-tf", "%l:%M %_p", NULL };
@@ -146,7 +145,6 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_l,	   spawn,	   {.v = libreofficecmd } },
 	{ MODKEY|ControlMask,		XK_b,	   spawn,	   {.v = bluemancmd } },
 	{ MODKEY|ControlMask,		XK_p,	   spawn,	   {.v = pavucontrolcmd } },
-	{ MODKEY|ControlMask,		XK_n,	   spawn,	   {.v = newsflashcmd } },
 	{ SUPER|ShiftMask|ControlMask,	XK_1,	   spawn,	   {.v = setdualscreen1cmd } },
 	{ SUPER|ShiftMask|ControlMask,	XK_2,	   spawn,	   {.v = setdualscreen2cmd } },
 	{ SUPER|ShiftMask|ControlMask,	XK_3,	   spawn,	   {.v = setsinglescreencmd } },
