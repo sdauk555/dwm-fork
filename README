@@ -26,6 +26,8 @@ Ctrl+alt+del = logout
 # Navigation  
 Alt+'numkey' = switch tag  
 Alt+tab = switch to previous tag  
+Ctrl+alt+k = switch to tag on right  
+Ctrl+alt+j = switch to tag on left  
 Alt+shift+'numkey' = move selected window to tag  
 Alt+ctrl+'numkeys' = show all windows on selected tags  
 Alt+0 = show all windows on all tags  
@@ -62,3 +64,13 @@ Super+shift+alt+0 = reset gap size to default
 # Floating mode  
 Alt+mouse1 = drag window  
 Alt+mouse2 = resize window   
+  
+# Touchpad (natural scrolling/swiping)  
+Tap = left click  
+Two finger tap = right click  
+Two finger swipe up = scroll down  
+Two finger swipe down = scroll up  
+Three finger swipe left = next tag  
+Three finger swipe right = prev tag  
+Pinch in = zoom out  
+Pinch out = zoom in  
