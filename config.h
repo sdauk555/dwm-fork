@@ -157,6 +157,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask|ControlMask, XK_4, 	   spawn,	   {.v = audiosrc4cmd } },
 	{ 0,                            XF86XK_MonBrightnessUp,  spawn, {.v = brupcmd } },
 	{ 0,                            XF86XK_MonBrightnessDown, spawn, {.v = brdowncmd } },
+	{ MODKEY|ControlMask,		XK_k,	   viewtoright,	   {0} },
+	{ MODKEY|ControlMask,		XK_j,	   viewtoleft,	   {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
