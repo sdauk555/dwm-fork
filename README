@@ -65,7 +65,7 @@ Super+shift+alt+0 = reset gap size to default
 Alt+mouse1 = drag window  
 Alt+mouse2 = resize window   
   
-# Touchpad (natural scrolling/swiping)  
+# Touchpad (natural scrolling/swiping) <-- Note: Requires properly configured libinput-gestures package  
 Tap = left click  
 Two finger tap = right click  
 Two finger swipe up = scroll down  
