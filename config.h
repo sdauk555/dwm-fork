@@ -42,6 +42,10 @@ static const Layout layouts[] = {
 	{ "[M]",      monocle },
 };
 
+static const Rule rules[] = {
+	{ NULL,	NULL,	NULL,	0,	False,	-1 },
+};
+
 /* key definitions */
 #define MODKEY Mod1Mask
 #define SUPER Mod4Mask
