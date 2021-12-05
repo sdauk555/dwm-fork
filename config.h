@@ -64,12 +64,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 
 /* custom program cmds */
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *bravecmd[] = { "brave", NULL };
+static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *pcmanfmcmd[] = { "pcmanfm", NULL };
-static const char *thunderbirdcmd[] = { "thunderbird", NULL };
 static const char *spotifycmd[] = { "spotify", NULL };
-static const char *vmplayercmd[] = { "vmplayer", NULL };
-static const char *libreofficecmd[] = { "libreoffice", NULL };
 static const char *bluemancmd[] = { "blueman-manager", NULL };
 static const char *pavucontrolcmd[] = { "pavucontrol", NULL };
 
@@ -131,13 +128,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ SUPER,			XK_w,	   spawn,	   {.v = bravecmd } },
+	{ SUPER,			XK_w,	   spawn,	   {.v = firefoxcmd } },
 	{ SUPER,			XK_f,	   spawn,	   {.v = pcmanfmcmd } },
 	{ SUPER,			XK_l,	   spawn,	   {.v = lockscreencmd } },
-	{ MODKEY|ControlMask,		XK_m,	   spawn,	   {.v = thunderbirdcmd } },
 	{ MODKEY|ControlMask,		XK_s,	   spawn,	   {.v = spotifycmd } },
-	{ MODKEY|ControlMask,		XK_v,	   spawn,	   {.v = vmplayercmd } },
-	{ MODKEY|ControlMask,		XK_l,	   spawn,	   {.v = libreofficecmd } },
 	{ MODKEY|ControlMask,		XK_b,	   spawn,	   {.v = bluemancmd } },
 	{ MODKEY|ControlMask,		XK_p,	   spawn,	   {.v = pavucontrolcmd } },
 	{ SUPER|ShiftMask|ControlMask,	XK_1,	   spawn,	   {.v = setdualscreen1cmd } },
