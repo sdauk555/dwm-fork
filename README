@@ -3,12 +3,12 @@ Keybinds Guide:
 # Launchers  
 Ctrl+alt+t = terminal  
 Super+space = dmenu  
-Super+w = brave  
+Super+w = firefox  
 Super+f = pcmanfm  
-Ctrl+alt+m = thunderbird  
 Ctrl+alt+s = spotify  
-Ctrl+alt+v = vmware  
-Ctrl+alt+l = libreoffice 
+Ctrl+alt+v = virtual box  
+Ctrl+alt+o = open office 
+Ctrl+alt+c = vscode  
 Ctrl+alt+b = blueman manager  
 Ctrl+alt+p = pavucontrol  
   
