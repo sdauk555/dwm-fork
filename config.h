@@ -70,6 +70,7 @@ static const char *spotifycmd[] = { "spotify", NULL };
 static const char *officecmd[] = { "desktopeditors", NULL };
 static const char *vscodecmd[] = { "code", NULL };
 static const char *vmcmd[] = { "virtualbox", NULL };
+static const char *screenshotcmd[] = { "flameshot gui", NULL };
 static const char *bluemancmd[] = { "blueman-manager", NULL };
 static const char *pavucontrolcmd[] = { "pavucontrol", NULL };
 
@@ -140,6 +141,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_v,	   spawn,	   {.v = vmcmd } },
 	{ MODKEY|ControlMask,		XK_b,	   spawn,	   {.v = bluemancmd } },
 	{ MODKEY|ControlMask,		XK_p,	   spawn,	   {.v = pavucontrolcmd } },
+	{ SUPER,			XK_Print,  spawn,	   {.v = screenshotcmd } },
 	{ SUPER|ShiftMask|ControlMask,	XK_1,	   spawn,	   {.v = setdualscreen1cmd } },
 	{ SUPER|ShiftMask|ControlMask,	XK_2,	   spawn,	   {.v = setdualscreen2cmd } },
 	{ SUPER|ShiftMask|ControlMask,	XK_3,	   spawn,	   {.v = setsinglescreencmd } },
