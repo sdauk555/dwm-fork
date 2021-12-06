@@ -70,7 +70,7 @@ static const char *spotifycmd[] = { "spotify", NULL };
 static const char *officecmd[] = { "desktopeditors", NULL };
 static const char *vscodecmd[] = { "code", NULL };
 static const char *vmcmd[] = { "virtualbox", NULL };
-static const char *screenshotcmd[] = { "flameshot gui", NULL };
+static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 static const char *bluemancmd[] = { "blueman-manager", NULL };
 static const char *pavucontrolcmd[] = { "pavucontrol", NULL };
 
