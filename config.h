@@ -53,7 +53,7 @@ static const Rule rules[] = {
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
+//	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
@@ -79,15 +79,11 @@ static const char *lockscreencmd[] = { "betterlockscreen", "-l", "--time-format"
 static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *volupcmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
-static const char *audiosrc1cmd[] = { "pactl", "set-default-sink", "0", NULL };
-static const char *audiosrc2cmd[] = { "pactl", "set-default-sink", "1", NULL };
-static const char *audiosrc3cmd[] = { "pactl", "set-default-sink", "2", NULL };
-static const char *audiosrc4cmd[] = { "pactl", "set-default-sink", "3", NULL };
 static const char *brupcmd[] = { "xbacklight", "-inc", "10", NULL };
 static const char *brdowncmd[] = { "xbacklight", "-dec", "10", NULL };
-static const char *setdualscreen1cmd[] = { "/home/sam/.screenlayout/DualMonitor1.sh", NULL };
-static const char *setdualscreen2cmd[] = { "/home/sam/.screenlayout/DualMonitor2.sh", NULL };
-static const char *setsinglescreencmd[] = { "/home/sam/.screenlayout/SingleMonitor.sh", NULL }; 
+static const char *setdualscreen1cmd[] = { "/home/sam/scripts/DualMonitor1.sh", NULL };
+static const char *setdualscreen2cmd[] = { "/home/sam/scripts/DualMonitor2.sh", NULL };
+static const char *setsinglescreencmd[] = { "/home/sam/scripts/SingleMonitor.sh", NULL }; 
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -148,10 +144,6 @@ static Key keys[] = {
 	{ 0, 				XF86XK_AudioMute, spawn,   {.v = mutecmd } },
 	{ 0, 				XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
 	{ 0, 				XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
-	{ MODKEY|ShiftMask|ControlMask, XK_1,	   spawn,	   {.v = audiosrc1cmd } },
-	{ MODKEY|ShiftMask|ControlMask, XK_2,	   spawn,	   {.v = audiosrc2cmd } },
-	{ MODKEY|ShiftMask|ControlMask, XK_3,	   spawn,	   {.v = audiosrc3cmd } },
-	{ MODKEY|ShiftMask|ControlMask, XK_4, 	   spawn,	   {.v = audiosrc4cmd } },
 	{ 0,                            XF86XK_MonBrightnessUp,  spawn, {.v = brupcmd } },
 	{ 0,                            XF86XK_MonBrightnessDown, spawn, {.v = brdowncmd } },
 	{ MODKEY|ControlMask,		XK_k,	   viewtoright,	   {0} },

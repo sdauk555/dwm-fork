@@ -17,10 +17,6 @@ Super+l = lock screen
 Super+ctrl+shift+1 = screen layout option 1  
 Super+ctrl+shift+2 = screen layout option 2  
 Super+ctrl+shift+3 = screen layout option 3  
-Ctrl+alt+shift+1 = audio source 0  
-Ctrl+alt+shift+2 = audio source 1  
-Ctrl+alt+shift+3 = audio source 2  
-Ctrl+alt+shift+4 = audio source 3  
 Super+PrtSc = screenshot  
 Ctrl+alt+del = logout  
   
