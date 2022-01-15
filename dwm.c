@@ -729,6 +729,9 @@ drawbar(Monitor *m)
 	unsigned int i, occ = 0, urg = 0;
 	Client *c;
 
+	if (!m->showbar)
+		return;
+
 	/* draw status first so it can be overdrawn by tags later */
 	if (m == selmon) { /* status is only drawn on selected monitor */
 		drw_setscheme(drw, scheme[SchemeNorm]);
@@ -2346,25 +2349,26 @@ zoom(const Arg *arg)
 
 void
 viewtoleft(const Arg *arg) {
-	if(__builtin_popcount(selmon->tagset[selmon->seltags] & TAGMASK) == 1
-	&& selmon->tagset[selmon->seltags] > 1) {
-		selmon->seltags ^= 1; /* toggle sel tagset */
-		selmon->tagset[selmon->seltags] = selmon->tagset[selmon->seltags ^ 1] >> 1;
-		focus(NULL);
-		arrange(selmon);
-	}
+        if(__builtin_popcount(selmon->tagset[selmon->seltags] & TAGMASK) == 1
+        && selmon->tagset[selmon->seltags] > 1) {
+                selmon->seltags ^= 1; /* toggle sel tagset */
+                selmon->tagset[selmon->seltags] = selmon->tagset[selmon->seltags ^ 1] >> 1;
+                focus(NULL);
+                arrange(selmon);
+        }
 }
 
 void
 viewtoright(const Arg *arg) {
-	if(__builtin_popcount(selmon->tagset[selmon->seltags] & TAGMASK) == 1
-	&& selmon->tagset[selmon->seltags] & (TAGMASK >> 1)) {
-		selmon->seltags ^= 1; /* toggle sel tagset */
-		selmon->tagset[selmon->seltags] = selmon->tagset[selmon->seltags ^ 1] << 1;
-		focus(NULL);
-		arrange(selmon);
-	}
+        if(__builtin_popcount(selmon->tagset[selmon->seltags] & TAGMASK) == 1
+        && selmon->tagset[selmon->seltags] & (TAGMASK >> 1)) {
+                selmon->seltags ^= 1; /* toggle sel tagset */
+                selmon->tagset[selmon->seltags] = selmon->tagset[selmon->seltags ^ 1] << 1;
+                focus(NULL);
+                arrange(selmon);
+        }
 }
+
 
 int
 main(int argc, char *argv[])
