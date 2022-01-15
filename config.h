@@ -74,6 +74,7 @@ static const char *vmcmd[] = { "virtualbox", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 static const char *bluemancmd[] = { "blueman-manager", NULL };
 static const char *pavucontrolcmd[] = { "pavucontrol", NULL };
+static const char *appmenucmd[] = {"jgmenu_run", NULL };
 
 /* custom system control cmds */
 static const char *lockscreencmd[] = { "betterlockscreen", "-l", NULL };
@@ -177,4 +178,5 @@ static Button buttons[] = {
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	{ ClkRootWin,		0,		Button3,	spawn,		{.v = appmenucmd } },
 };
