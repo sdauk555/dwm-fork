@@ -12,6 +12,7 @@ Ctrl+alt+l = libreoffice
 Ctrl+alt+c = vscode  
 Ctrl+alt+b = blueman manager  
 Ctrl+alt+p = pavucontrol  
+Right Click on Desktop = jgmenu
   
 # System  
 Super+l = lock screen  
