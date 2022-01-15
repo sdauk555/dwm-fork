@@ -1,0 +1,74 @@
+Keybinds Guide:
+
+# Launchers  
+Ctrl+alt+t = terminal  
+Super+space = dmenu  
+Super+w = firefox  
+Super+m = thunderbird  
+Super+f = pcmanfm  
+Ctrl+alt+s = spotify  
+Ctrl+alt+v = virtual box  
+Ctrl+alt+l = libreoffice 
+Ctrl+alt+c = vscode  
+Ctrl+alt+b = blueman manager  
+Ctrl+alt+p = pavucontrol  
+  
+# System  
+Super+l = lock screen  
+Super+ctrl+shift+1 = screen layout option 1  
+Super+ctrl+shift+2 = screen layout option 2  
+Super+ctrl+shift+3 = screen layout option 3  
+Super+PrtSc = screenshot  
+Ctrl+alt+del = logout  
+  
+# Navigation  
+Alt+'numkey' = switch tag  
+Alt+tab = switch to previous tag  
+Ctrl+alt+k = switch to tag on right  
+Ctrl+alt+j = switch to tag on left  
+Alt+shift+'numkey' = move selected window to tag  
+Alt+ctrl+'numkeys' = show all windows on selected tags  
+Alt+0 = show all windows on all tags  
+Alt+. = switch to next monitor  
+Alt+, = switch to previous monitor  
+Alt+shift+. = move selected window to next monitor  
+Alt+shift+, = move selected window to previous monitor  
+Alt+enter = change master window  
+Alt+i = increase number of master windows  
+Alt+d = decrease number of master windows  
+Alt+j = focus next window  
+Alt+k = focus previous window  
+Alt+shift+j = move selected window up in stack  
+Alt+shift+k = move selected window down in stack  
+Super+q = kill selected window  
+  
+# Windows  
+Alt+t = switch to tiling mode  
+Alt+f = switch to floating mode  
+Alt+m = switch to monocle mode  
+Alt+shift+space = switch to previous mode for window  
+Alt+space = toggle floating mode for window  
+Alt+h = decrease master window size  
+Alt+l = increase master window size  
+Super+alt+h = increase gap size  
+Super+alt+l = decrease gap size  
+Super+shift+alt+h = increase horizontal gap size  
+Super+shift+alt+l = decrease horizontal gap size  
+Super+ctrl+alt+h = increase vertical gap size  
+Super+ctrl+alt+l = decrease vertical gap size  
+Super+alt+0 = toggle gaps  
+Super+shift+alt+0 = reset gap size to default 
+  
+# Floating mode  
+Alt+mouse1 = drag window  
+Alt+mouse2 = resize window   
+  
+# Touchpad (natural scrolling/swiping) <-- Note: Requires properly configured libinput-gestures package  
+Tap = left click  
+Two finger tap = right click  
+Two finger swipe up = scroll down  
+Two finger swipe down = scroll up  
+Three finger swipe left = next tag  
+Three finger swipe right = prev tag  
+Pinch in = zoom out  
+Pinch out = zoom in  
