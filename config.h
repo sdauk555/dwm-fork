@@ -86,6 +86,7 @@ static const char *brdowncmd[] = { "xbacklight", "-dec", "10", NULL };
 static const char *setdualscreen1cmd[] = { "/home/sam/scripts/DualMonitor1.sh", NULL };
 static const char *setdualscreen2cmd[] = { "/home/sam/scripts/DualMonitor2.sh", NULL };
 static const char *setsinglescreencmd[] = { "/home/sam/scripts/SingleMonitor.sh", NULL };
+static const char *setoutputcmd[] = { "/home/sam/scripts/outputSwitch.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key       			 function          argument */
@@ -144,6 +145,7 @@ static Key keys[] = {
 	{ SUPER|ShiftMask|ControlMask,	XK_1,	  			 spawn,	  	   {.v = setdualscreen1cmd } },
 	{ SUPER|ShiftMask|ControlMask,	XK_2,	  			 spawn,	  	   {.v = setdualscreen2cmd } },
 	{ SUPER|ShiftMask|ControlMask,	XK_3,	  			 spawn,	  	   {.v = setsinglescreencmd } },
+	{ SUPER|ShiftMask|ControlMask,  XK_d,				 spawn,		   {.v = setoutputcmd } },
 	{ 0, 				XF86XK_AudioMute, 		 spawn,   	   {.v = mutecmd } },
 	{ 0, 				XF86XK_AudioLowerVolume,	 spawn, 	   {.v = voldowncmd } },
 	{ 0, 				XF86XK_AudioRaiseVolume,	 spawn, 	   {.v = volupcmd } },
