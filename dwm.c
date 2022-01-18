@@ -455,25 +455,22 @@ buttonpress(XEvent *e)
 	}
 	if (ev->window == selmon->barwin) {
 		i = x = 0;
-		x += TEXTW(buttonbar);
-		if(ev->x < x) {
+		do
+			x += TEXTW(tags[i]);
+		while (ev->x >= x && ++i < LENGTH(tags));
+		if (i < LENGTH(tags)) {
+			click = ClkTagBar;
+			arg.ui = 1 << i;
+		} else if (ev->x < x + blw)
+			click = ClkLtSymbol;
+		else if (ev->x < x + blw + TEXTW(buttonbar) + 10)
 			click = ClkButton;
-		} else {
-			do
-				x += TEXTW(tags[i]);
-			while (ev->x >= x && ++i < LENGTH(tags));
-			if (i < LENGTH(tags)) {
-				click = ClkTagBar;
-				arg.ui = 1 << i;
-			} else if (ev->x < x + blw)
-				click = ClkLtSymbol;
-			else if (ev->x > selmon->ww - TEXTW(stext))
-				click = ClkStatusText;
-			else
-				click = ClkWinTitle;
-		}
+		else if (ev->x > selmon->ww - TEXTW(stext))
+			click = ClkStatusText;
+		else
+			click = ClkWinTitle;
 	} else if ((c = wintoclient(ev->window))) {
-		focus(c);
+		 focus(c);
 		restack(selmon);
 		XAllowEvents(dpy, ReplayPointer, CurrentTime);
 		click = ClkClientWin;
@@ -750,9 +747,6 @@ drawbar(Monitor *m)
 			urg |= c->tags;
 	}
 	x = 0;
-	w = blw = TEXTW(buttonbar);
-	drw_setscheme(drw, scheme[SchemeNorm]);
-	x = drw_text(drw, x, 0, w, bh, lrpad / 2, buttonbar, 0);
 	for (i = 0; i < LENGTH(tags); i++) {
 		w = TEXTW(tags[i]);
 		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
@@ -766,6 +760,10 @@ drawbar(Monitor *m)
 	w = blw = TEXTW(m->ltsymbol);
 	drw_setscheme(drw, scheme[SchemeNorm]);
 	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
+
+	w = blw = TEXTW(buttonbar);
+	drw_setscheme(drw, scheme[SchemeNorm]);
+	x = drw_text(drw, x, 0, w, bh, lrpad / 2, buttonbar, 0);
 
 	if ((w = m->ww - tw - x) > bh) {
 		if (m->sel) {
