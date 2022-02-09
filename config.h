@@ -66,7 +66,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 /* custom program cmds */
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
-static const char *filecmd[] = { "Thunar", NULL };
+static const char *filecmd[] = { "pcmanfm", NULL };
 static const char *spotifycmd[] = { "spotify", NULL };
 static const char *officecmd[] = { "flatpak", "run", "org.onlyoffice.desktopeditors", NULL };
 static const char *emailcmd[] = { "thunderbird", NULL };
