@@ -266,6 +266,8 @@ static int xerror(Display *dpy, XErrorEvent *ee);
 static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
+static void viewtoleft(const Arg *arg);
+static void viewtoright(const Arg *arg);
 
 /* variables */
 static Systray *systray = NULL;
@@ -2572,6 +2574,30 @@ zoom(const Arg *arg)
 		if (!c || !(c = nexttiled(c->next)))
 			return;
 	pop(c);
+}
+
+void
+viewtoleft(const Arg *arg) {
+        if(__builtin_popcount(selmon->tagset[selmon->seltags] & TAGMASK) == 1
+        && selmon->tagset[selmon->seltags] > 1) {
+                selmon->seltags ^= 1; /* toggle sel tagset */
+                selmon->tagset[selmon->seltags] = selmon->tagset[selmon->seltags
+^ 1] >> 1;
+                focus(NULL);
+                arrange(selmon);
+        }
+}
+
+void
+viewtoright(const Arg *arg) {
+        if(__builtin_popcount(selmon->tagset[selmon->seltags] & TAGMASK) == 1
+        && selmon->tagset[selmon->seltags] & (TAGMASK >> 1)) {
+                selmon->seltags ^= 1; /* toggle sel tagset */
+                selmon->tagset[selmon->seltags] = selmon->tagset[selmon->seltags
+^ 1] << 1;
+                focus(NULL);
+                arrange(selmon);
+        }
 }
 
 int
