@@ -66,7 +66,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 /* custom program cmds */
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
-static const char *pcmanfmcmd[] = { "pcmanfm", NULL };
+static const char *filecmd[] = { "Thunar", NULL };
 static const char *spotifycmd[] = { "spotify", NULL };
 static const char *officecmd[] = { "flatpak", "run", "org.onlyoffice.desktopeditors", NULL };
 static const char *emailcmd[] = { "thunderbird", NULL };
@@ -134,7 +134,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma, 			 tagmon,           {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,			 tagmon,           {.i = +1 } },
 	{ SUPER,			XK_w,	  			 spawn,	  	   {.v = firefoxcmd } },
-	{ SUPER,			XK_f,	  			 spawn,	  	   {.v = pcmanfmcmd } },
+	{ SUPER,			XK_f,	  			 spawn,	  	   {.v = filecmd } },
 	{ SUPER,			XK_m,	  			 spawn,	  	   {.v = emailcmd } },
 	{ SUPER,			XK_l,	  			 spawn,	  	   {.v = lockscreencmd } },
 	{ MODKEY|ControlMask,		XK_s,	  			 spawn,	  	   {.v = spotifycmd } },
