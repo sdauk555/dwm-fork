@@ -52,8 +52,6 @@ Alt+shift+space = switch to previous mode for window
 Alt+space = toggle floating mode for window  
 Alt+h = decrease master window size  
 Alt+l = increase master window size  
-Super+alt+h = increase gap size  
-Super+alt+l = decrease gap size  
   
 # Floating mode  
 Alt+mouse1 = drag window  
