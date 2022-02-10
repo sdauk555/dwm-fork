@@ -65,7 +65,7 @@ Super+shift+alt+0 = reset gap size to default
 Alt+mouse1 = drag window  
 Alt+mouse2 = resize window   
   
-# Touchpad (natural scrolling/swiping) <-- Note: Requires properly configured libinput-gestures package  
+# Touchpad (natural scrolling/swiping)  
 Tap = left click  
 Two finger tap = right click  
 Two finger swipe up = scroll down  
@@ -74,3 +74,72 @@ Three finger swipe left = next tag
 Three finger swipe right = prev tag  
 Pinch in = zoom out  
 Pinch out = zoom in  
+  
+# Application Dependencies for Best Experience  
+alacritty  
+file-roller  
+fwupd  
+firefox  
+VScode  
+git  
+neofetch  
+bpytop  
+p7zip  
+NetworkManager  
+gvfs  
+pcmanfm  
+udiskie  
+udisks2  
+jgmenu  
+fuse  
+thunderbird  
+python  
+java  
+wget  
+curl  
+xtools  
+wmctrl  
+xdotool  
+xorg  
+xorg-apps  
+arandr  
+feh  
+flameshot  
+nitrogen  
+picom  
+mate-polkit  
+vulkan-intel  
+xf86-video-intel  
+xss-lock  
+lxappearance  
+dmenu  
+mesa-intel  
+pavucontrol  
+pulseaudio pulseaudio-alsa pulseaudio-bluetooth  
+alsa-utils  
+bluez  
+blueman  
+thermald  
+tlp  
+python-pyqt5  
+gedit  
+eog  
+celluloid  
+hplip  
+onlyoffice  
+gimp  
+qbittorrent  
+virt-manager  
+noto-fonts noto-cjk-fonts noto-emoji-fonts dejavu-fonts liberation-fonts fira-code-fonts  
+zsh zsh-autosuggestions  
+i3lock-color betterlockscreen  
+font-manager  
+spotify  
+libinput-gestures  
+nerd-fonts-complete  
+ly  
+zoom teams  
+slstatus (my fork)  
+skanlite  
+cups  
+intellij  
