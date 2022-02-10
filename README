@@ -54,12 +54,6 @@ Alt+h = decrease master window size
 Alt+l = increase master window size  
 Super+alt+h = increase gap size  
 Super+alt+l = decrease gap size  
-Super+shift+alt+h = increase horizontal gap size  
-Super+shift+alt+l = decrease horizontal gap size  
-Super+ctrl+alt+h = increase vertical gap size  
-Super+ctrl+alt+l = decrease vertical gap size  
-Super+alt+0 = toggle gaps  
-Super+shift+alt+0 = reset gap size to default 
   
 # Floating mode  
 Alt+mouse1 = drag window  
