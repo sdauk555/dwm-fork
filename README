@@ -3,7 +3,7 @@ Keybinds Guide:
 # Launchers  
 Ctrl+alt+t = terminal  
 Super+space = dmenu  
-Super+w = firefox  
+Super+w = vivaldi  
 Super+m = thunderbird  
 Super+f = pcmanfm  
 Ctrl+alt+s = spotify  
@@ -71,7 +71,7 @@ Pinch out = zoom in
 alacritty  
 file-roller  
 fwupd  
-firefox  
+vivaldi  
 VScode  
 discord  
 git  

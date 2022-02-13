@@ -13,8 +13,8 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
 static const char buttonbar[]	    = "X";
-static const char *fonts[]          = { "monospace:size=10", "Noto Emoji Nerd Font Complete Mono:size10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "Fira Mono:size=10", "Noto Emoji Nerd Font Complete Mono:size10" };
+static const char dmenufont[]       = "Fira Mono:size=10";
 static const char col_gray1[]       = "#141414";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#262938";
@@ -64,7 +64,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 
 /* custom program cmds */
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *firefoxcmd[] = { "firefox", NULL };
+static const char *browsercmd[] = { "vivaldi-stable", NULL };
 static const char *filecmd[] = { "pcmanfm", NULL };
 static const char *spotifycmd[] = { "spotify", NULL };
 static const char *officecmd[] = { "flatpak", "run", "org.onlyoffice.desktopeditors", NULL };
@@ -116,7 +116,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period,			 focusmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma, 			 tagmon,           {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,			 tagmon,           {.i = +1 } },
-	{ SUPER,			XK_w,	  			 spawn,	  	{.v = firefoxcmd } },
+	{ SUPER,			XK_w,	  			 spawn,	  	{.v = browsercmd } },
 	{ SUPER,			XK_f,	  			 spawn,	  	{.v = filecmd } },
 	{ SUPER,			XK_m,	  			 spawn,	  	{.v = emailcmd } },
 	{ SUPER,			XK_l,	  			 spawn,	  	{.v = lockscreencmd } },
