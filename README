@@ -4,7 +4,7 @@ Keybinds Guide:
 Ctrl+alt+t = terminal  
 Super+space = dmenu  
 Super+w = vivaldi  
-Super+m = thunderbird  
+Super+m = mailspring  
 Super+f = pcmanfm  
 Ctrl+alt+s = spotify  
 Ctrl+alt+v = virt-manager  
@@ -85,7 +85,7 @@ udiskie
 udisks2  
 jgmenu  
 fuse  
-thunderbird  
+mailspring  
 python  
 java  
 wget  
