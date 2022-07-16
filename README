@@ -13,7 +13,6 @@ Ctrl+alt+d = discord
 Ctrl+alt+c = vscode  
 Ctrl+alt+b = blueman manager  
 Ctrl+alt+p = pavucontrol  
-Right Click on Desktop = jgmenu
   
 # System  
 Super+l = lock screen  
@@ -67,72 +66,3 @@ Three finger swipe right = prev tag
 Pinch in = zoom out  
 Pinch out = zoom in  
   
-# Application Dependencies for Best Experience  
-alacritty  
-file-roller  
-fwupd  
-vivaldi  
-VScode  
-discord  
-git  
-neofetch  
-bpytop  
-p7zip  
-NetworkManager  
-gvfs  
-pcmanfm  
-udiskie  
-udisks2  
-jgmenu  
-fuse  
-mailspring  
-python  
-java  
-wget  
-curl  
-xtools  
-wmctrl  
-xdotool  
-xorg  
-xorg-apps  
-arandr  
-feh  
-flameshot  
-nitrogen  
-picom  
-mate-polkit  
-vulkan-intel  
-xf86-video-intel  
-xss-lock  
-lxappearance  
-dmenu  
-mesa-intel  
-pavucontrol  
-pulseaudio pulseaudio-alsa pulseaudio-bluetooth  
-alsa-utils  
-bluez  
-blueman  
-thermald  
-tlp  
-python-pyqt5  
-gedit  
-eog  
-celluloid  
-hplip  
-onlyoffice  
-gimp  
-qbittorrent  
-virt-manager  
-noto-fonts noto-cjk-fonts noto-emoji-fonts dejavu-fonts liberation-fonts fira-code-fonts  
-zsh zsh-autosuggestions  
-i3lock-color betterlockscreen  
-font-manager  
-spotify  
-libinput-gestures  
-nerd-fonts-complete  
-ly  
-zoom teams  
-slstatus (my fork)  
-skanlite  
-cups  
-intellij  
