@@ -3,12 +3,12 @@ Keybinds Guide:
 # Launchers  
 Ctrl+alt+t = terminal  
 Super+space = dmenu  
-Super+w = vivaldi  
-Super+m = mailspring  
+Super+w = google chrome  
+Super+m = thunderbird  
 Super+f = pcmanfm  
 Ctrl+alt+s = spotify  
 Ctrl+alt+v = virt-manager  
-Ctrl+alt+o = onlyoffice 
+Ctrl+alt+o = libreoffice 
 Ctrl+alt+d = discord  
 Ctrl+alt+c = vscode  
 Ctrl+alt+b = blueman manager  
