@@ -15,15 +15,15 @@ static const int topbar             = 1;     /* 0 means bottom bar */
 static const char buttonbar[]	    = "X";
 static const char *fonts[]          = { "Fira Mono:size=10", "Noto Emoji Nerd Font Complete Mono:size10" };
 static const char dmenufont[]       = "Fira Mono:size=10";
-static const char col_gray1[]       = "#141414";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#262938";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_blue[]        = "#0a2a8a";
+static const char col_black[]       = "#1d2021";
+static const char col_gray2[]       = "#32302f";
+static const char col_gray3[]       = "#32302f";
+static const char col_white[]       = "#d4be98";
+static const char col_blue[]        = "#7daea3";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray4, col_gray3, col_blue },
-	[SchemeSel]  = { col_gray4, col_gray1,  col_blue  },
+	[SchemeNorm] = { col_white, col_gray3, col_blue },
+	[SchemeSel]  = { col_white, col_black,  col_blue  },
 };
 
 /* tagging */
@@ -60,22 +60,21 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray3, "-nf", col_gray4, "-sb", col_blue, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray3, "-nf", col_white, "-sb", col_blue, "-sf", col_white, NULL };
 
 /* custom program cmds */
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *browsercmd[] = { "vivaldi-stable", NULL };
+static const char *browsercmd[] = { "google-chrome-stable", NULL };
 static const char *filecmd[] = { "pcmanfm", NULL };
 static const char *spotifycmd[] = { "spotify", NULL };
-static const char *officecmd[] = { "flatpak", "run", "org.onlyoffice.desktopeditors", NULL };
-static const char *emailcmd[] = { "mailspring", NULL };
+static const char *officecmd[] = { "libreoffice", NULL };
+static const char *emailcmd[] = { "thunderbird", NULL };
 static const char *discordcmd[] = { "discord", NULL };
 static const char *vscodecmd[] = { "code", NULL };
 static const char *vmcmd[] = { "virt-manager", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 static const char *bluemancmd[] = { "blueman-manager", NULL };
 static const char *pavucontrolcmd[] = { "pavucontrol", NULL };
-static const char *appmenucmd[] = {"jgmenu_run", NULL };
 
 /* custom system control cmds */
 static const char *lockscreencmd[] = { "betterlockscreen", "-l", NULL };
@@ -163,6 +162,5 @@ static Button buttons[] = {
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
-	{ ClkRootWin,		0,		Button3,	spawn,		{.v = appmenucmd } },
 };
 
