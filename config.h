@@ -19,11 +19,11 @@ static const char col_black[]       = "#1d2021";
 static const char col_gray2[]       = "#32302f";
 static const char col_gray3[]       = "#32302f";
 static const char col_white[]       = "#d4be98";
-static const char col_blue[]        = "#7daea3";
+// static const char col_blue[]        = "#7daea3";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_gray3, col_blue },
-	[SchemeSel]  = { col_white, col_black,  col_blue  },
+	[SchemeNorm] = { col_white, col_gray3, col_black },
+	[SchemeSel]  = { col_white, col_black,  col_black  },
 };
 
 /* tagging */
@@ -60,7 +60,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray3, "-nf", col_white, "-sb", col_blue, "-sf", col_white, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray3, "-nf", col_white, "-sb", col_black, "-sf", col_white, NULL };
 
 /* custom program cmds */
 static const char *termcmd[]  = { "alacritty", NULL };
