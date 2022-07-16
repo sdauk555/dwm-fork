@@ -5,6 +5,11 @@
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
+static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -98,6 +103,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,     			 incnmaster,       {.i = -1 } },
 	{ MODKEY,                       XK_h,     			 setmfact,         {.f = -0.05} },
 	{ MODKEY,                       XK_l,     			 setmfact,         {.f = +0.05} },
+        { MODKEY|Mod4Mask,              XK_0,      			 togglegaps,       {0} },
 	{ MODKEY|ShiftMask,		XK_j,	  			 movestack,        {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_k,     			 movestack,        {.i = -1 } },
 	{ MODKEY,                       XK_Return,			 zoom,             {0} },
