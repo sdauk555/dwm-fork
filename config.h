@@ -3,7 +3,7 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
@@ -24,11 +24,11 @@ static const char col_black[]       = "#1d2021";
 static const char col_gray2[]       = "#32302f";
 static const char col_gray3[]       = "#32302f";
 static const char col_white[]       = "#d4be98";
-// static const char col_blue[]        = "#7daea3";
+static const char col_blue[]        = "#7daea3";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_gray3, col_black },
-	[SchemeSel]  = { col_white, col_black,  col_black  },
+	[SchemeNorm] = { col_white, col_gray3, col_blue },
+	[SchemeSel]  = { col_white, col_black,  col_blue  },
 };
 
 /* tagging */
@@ -88,9 +88,9 @@ static const char *volupcmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", 
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-2%", NULL };
 static const char *brupcmd[] = { "xbacklight", "-inc", "10", NULL };
 static const char *brdowncmd[] = { "xbacklight", "-dec", "10", NULL };
-static const char *monitorcmd[] = { "/home/sam/scripts/monitor.sh", NULL };
+static const char *monitor1cmd[] = { "/home/sam/scripts/monitor1.sh", NULL };
+static const char *monitor2cmd[] = {"/home/sam/scripts/monitor2.sh", NULL };
 static const char *laptopcmd[] = { "/home/sam/scripts/laptop.sh", NULL };
-static const char *setoutputcmd[] = { "/home/sam/scripts/outputSwitch.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key       			 function          argument */
@@ -132,9 +132,9 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_b,	  			 spawn,	  	{.v = bluemancmd } },
 	{ MODKEY|ControlMask,		XK_p,	  			 spawn,	  	{.v = pavucontrolcmd } },
 	{ SUPER,			XK_Print, 			 spawn,	  	{.v = screenshotcmd } },
-	{ SUPER|ShiftMask|ControlMask,	XK_1,	  			 spawn,	  	{.v = monitorcmd } },
-	{ SUPER|ShiftMask|ControlMask,	XK_2,	  			 spawn,	  	{.v = laptopcmd } },
-	{ SUPER|ShiftMask|ControlMask,	XK_3,	  			 spawn,	  	{.v = setoutputcmd } },
+	{ SUPER|ShiftMask|ControlMask,	XK_1,	  			 spawn,	  	{.v = monitor1cmd } },
+	{ SUPER|ShiftMask|ControlMask,  XK_2,				 spawn,		{.v = monitor2cmd } },
+	{ SUPER|ShiftMask|ControlMask,	XK_3,	  			 spawn,	  	{.v = laptopcmd } },
 	{ 0, 				XF86XK_AudioMute, 		 spawn,   	{.v = mutecmd } },
 	{ 0, 				XF86XK_AudioLowerVolume,	 spawn, 	{.v = voldowncmd } },
 	{ 0, 				XF86XK_AudioRaiseVolume,	 spawn, 	{.v = volupcmd } },
