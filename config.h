@@ -88,9 +88,10 @@ static const char *volupcmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", 
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-2%", NULL };
 static const char *brupcmd[] = { "xbacklight", "-inc", "10", NULL };
 static const char *brdowncmd[] = { "xbacklight", "-dec", "10", NULL };
-static const char *monitor1cmd[] = { "/home/sam/scripts/monitor1.sh", NULL };
-static const char *monitor2cmd[] = {"/home/sam/scripts/monitor2.sh", NULL };
-static const char *laptopcmd[] = { "/home/sam/scripts/laptop.sh", NULL };
+//static const char *monitor1cmd[] = { "/home/sam/scripts/monitor1.sh", NULL };
+//static const char *monitor2cmd[] = {"/home/sam/scripts/monitor2.sh", NULL };
+//static const char *laptopcmd[] = { "/home/sam/scripts/laptop.sh", NULL };
+static const char *outputcmd[] = { "/home/sam/scripts/outputSwitch.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key       			 function          argument */
@@ -132,9 +133,10 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_b,	  			 spawn,	  	{.v = bluemancmd } },
 	{ MODKEY|ControlMask,		XK_p,	  			 spawn,	  	{.v = pavucontrolcmd } },
 	{ SUPER,			XK_Print, 			 spawn,	  	{.v = screenshotcmd } },
-	{ SUPER|ShiftMask|ControlMask,	XK_1,	  			 spawn,	  	{.v = monitor1cmd } },
+	/*{ SUPER|ShiftMask|ControlMask,	XK_1,	  			 spawn,	  	{.v = monitor1cmd } },
 	{ SUPER|ShiftMask|ControlMask,  XK_2,				 spawn,		{.v = monitor2cmd } },
-	{ SUPER|ShiftMask|ControlMask,	XK_3,	  			 spawn,	  	{.v = laptopcmd } },
+	{ SUPER|ShiftMask|ControlMask,	XK_3,	  			 spawn,	  	{.v = laptopcmd } },*/
+	{ SUPER|ShiftMask|ControlMask,	XK_d,				 spawn,		{.v = outputcmd } },
 	{ 0, 				XF86XK_AudioMute, 		 spawn,   	{.v = mutecmd } },
 	{ 0, 				XF86XK_AudioLowerVolume,	 spawn, 	{.v = voldowncmd } },
 	{ 0, 				XF86XK_AudioRaiseVolume,	 spawn, 	{.v = volupcmd } },
