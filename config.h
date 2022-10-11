@@ -20,11 +20,11 @@ static const int topbar             = 1;     /* 0 means bottom bar */
 static const char buttonbar[]	    = "X";
 static const char *fonts[]          = { "Fira Mono:size=10", "Noto Emoji Nerd Font Complete Mono:size10" };
 static const char dmenufont[]       = "Fira Mono:size=10";
-static const char col_black[]       = "#1d2021";
-static const char col_gray2[]       = "#32302f";
-static const char col_gray3[]       = "#32302f";
-static const char col_white[]       = "#d4be98";
-static const char col_blue[]        = "#7daea3";
+static const char col_black[]       = "#141414";
+static const char col_gray2[]       = "#444444";
+static const char col_gray3[]       = "#262938";
+static const char col_white[]       = "#eeeeee";
+static const char col_blue[]        = "#0a2a8a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_white, col_gray3, col_blue },
