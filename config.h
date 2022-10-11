@@ -18,6 +18,7 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
 static const char buttonbar[]	    = "X";
+static const char button2[]	    = "";
 static const char *fonts[]          = { "Fira Mono:size=10", "Noto Emoji Nerd Font Complete Mono:size10" };
 static const char dmenufont[]       = "Fira Mono:size=10";
 static const char col_black[]       = "#141414";
@@ -81,6 +82,7 @@ static const char *vmcmd[] = { "virt-manager", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 static const char *bluemancmd[] = { "blueman-manager", NULL };
 static const char *pavucontrolcmd[] = { "pavucontrol", NULL };
+static const char *xmenucmd[] = { "/home/sam/scripts/xmenu.sh", NULL };
 
 /* custom system control cmds */
 static const char *lockscreencmd[] = { "betterlockscreen", "-l", NULL };
@@ -159,6 +161,7 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkButton,		0,		Button1,	killclient,	{0} },
+	{ ClkButton2,		0,		Button1,	spawn,		{.v = xmenucmd} },
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },

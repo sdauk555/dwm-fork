@@ -80,7 +80,7 @@ enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
 enum { Manager, Xembed, XembedInfo, XLast }; /* Xembed atoms */
 enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; /* default atoms */
-enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkButton, ClkWinTitle,
+enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkButton, ClkButton2, ClkWinTitle,
        ClkClientWin, ClkRootWin, ClkLast }; /* clicks */
 
 typedef union {
@@ -478,20 +478,26 @@ buttonpress(XEvent *e)
 	}
 	if (ev->window == selmon->barwin) {
 		i = x = 0;
-                do
-                         x += TEXTW(tags[i]);
-                 while (ev->x >= x && ++i < LENGTH(tags));
-                 if (i < LENGTH(tags)) {
-                         click = ClkTagBar;
-                         arg.ui = 1 << i;
-                 } else if (ev->x < x + blw)
-                         click = ClkLtSymbol;
-                 else if (ev->x < x + blw + TEXTW(buttonbar) + 10)
-                         click = ClkButton;
-                 else if (ev->x > selmon->ww - TEXTW(stext))
-                         click = ClkStatusText;
-                 else
-                         click = ClkWinTitle;
+		x += TEXTW(button2);
+		if(ev->x < x) {
+			click = ClkButton2;
+		} else {
+
+               		 do
+                        	 x += TEXTW(tags[i]);
+                	 while (ev->x >= x && ++i < LENGTH(tags));
+                		 if (i < LENGTH(tags)) {
+                        		 click = ClkTagBar;
+                        		 arg.ui = 1 << i;
+                		 } else if (ev->x < x + blw)
+                        		 click = ClkLtSymbol;
+                		 else if (ev->x < x + blw + TEXTW(buttonbar) + 10)
+                        		 click = ClkButton;
+                		 else if (ev->x > selmon->ww - TEXTW(stext))
+                        		 click = ClkStatusText;
+                		 else
+                        		 click = ClkWinTitle;
+		}
 	} else if ((c = wintoclient(ev->window))) {
 		focus(c);
 		restack(selmon);
@@ -835,6 +841,11 @@ drawbar(Monitor *m)
 			urg |= c->tags;
 	}
 	x = 0;
+
+	w = blw = TEXTW(button2);
+	drw_setscheme(drw, scheme[SchemeNorm]);
+	x = drw_text(drw, x, 0, w, bh, lrpad / 2, button2, 0);
+
 	for (i = 0; i < LENGTH(tags); i++) {
 		w = TEXTW(tags[i]);
 		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
